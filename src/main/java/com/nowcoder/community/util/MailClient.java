@@ -20,7 +20,7 @@ public class MailClient {
     private JavaMailSender mailSender;
 
     @Value("${spring.mail.username}")
-    private String from;
+    private String from; // 发件人
 
     public void sendMail(String to, String subject, String content) {
         try {

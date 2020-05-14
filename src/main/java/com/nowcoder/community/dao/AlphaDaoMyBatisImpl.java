@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 public class AlphaDaoMyBatisImpl implements AlphaDao{
     @Override
     public String select() {
-        return "MyBatis";
+        return "mybatis";
     }
 }
