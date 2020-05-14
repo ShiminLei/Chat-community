@@ -91,7 +91,8 @@ public class UserService {
         String content = templateEngine.process("/mail/activation", context);
         System.out.println(content);
         System.out.println(user.getEmail());
-        mailClient.sendMail(user.getEmail(), "激活账号", content);
+//        mailClient.sendMail(user.getEmail(), "激活账号", content);
+        mailClient.sendMail(user.getEmail(), "激活账号", url);
 
         return map;
     }
