@@ -16,4 +16,6 @@ public interface DiscussPostMapper {
     // 用来求一共有多少条数据
     int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
 }
