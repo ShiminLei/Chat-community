@@ -95,10 +95,7 @@ public class UserService implements CommunityConstant {
         String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
         String content = templateEngine.process("/mail/activation", context);
-        System.out.println(content);
-        System.out.println(user.getEmail());
-//        mailClient.sendMail(user.getEmail(), "激活账号", content);
-        mailClient.sendMail(user.getEmail(), "激活账号", url);
+        mailClient.sendMail(user.getEmail(), "激活账号", content);
 
         return map;
     }
@@ -170,6 +167,10 @@ public class UserService implements CommunityConstant {
 
     public int updateHeader(int userId, String headerUrl) {
         return userMapper.updateHeader(userId, headerUrl);
+    }
+
+    public User findUserByName(String username) {
+        return userMapper.selectByName(username);
     }
 
 }
