@@ -12,7 +12,7 @@ public class User {
     private int type;
     private int status;
     private String activationCode;
-    private String headerUrl; // 头像的访问路径
+    private String headerUrl;
     private Date createTime;
 
     public int getId() {
