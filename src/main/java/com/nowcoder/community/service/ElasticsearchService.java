@@ -106,6 +106,11 @@ public class ElasticsearchService {
                         hits.getTotalHits(), response.getAggregations(), response.getScrollId(), hits.getMaxScore());
             }
 
+            @Override
+            public <T> T mapSearchHit(SearchHit searchHit, Class<T> aClass) {
+                return null;
+            }
+
         });
     }
 
