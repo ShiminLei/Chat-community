@@ -214,10 +214,9 @@ public class EventConsumer implements CommunityConstant {
                 policy.put("returnBody", CommunityUtil.getJSONString(0));
                 // 生成上传凭证
                 Auth auth = Auth.create(accessKey, secretKey);
-                String uploadToken = auth.uploadToken(shareBucketName, fileName, 7200, policy);
+                String uploadToken = auth.uploadToken(shareBucketName, fileName, 3600, policy);
                 // 指定上传机房
-                // 华南地区是 zone2
-                UploadManager manager = new UploadManager(new Configuration(Zone.zone2()));
+                UploadManager manager = new UploadManager(new Configuration(Zone.zone1()));
                 try {
                     // 开始上传图片
                     Response response = manager.put(

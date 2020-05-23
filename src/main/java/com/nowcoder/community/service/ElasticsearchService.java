@@ -110,7 +110,6 @@ public class ElasticsearchService {
             public <T> T mapSearchHit(SearchHit searchHit, Class<T> aClass) {
                 return null;
             }
-
         });
     }
 
